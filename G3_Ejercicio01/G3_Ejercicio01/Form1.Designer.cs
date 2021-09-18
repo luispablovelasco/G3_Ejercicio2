@@ -40,10 +40,14 @@
             this.dgvalumnos = new System.Windows.Forms.DataGridView();
             this.btnguardar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmboxcalificaciones = new System.Windows.Forms.ComboBox();
-            this.txtcalificaciones = new System.Windows.Forms.TextBox();
+            this.txtnota1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtprom = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtnota2 = new System.Windows.Forms.TextBox();
+            this.txtnota3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvalumnos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,7 +138,7 @@
             // btnguardar
             // 
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.Location = new System.Drawing.Point(231, 168);
+            this.btnguardar.Location = new System.Drawing.Point(118, 170);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(122, 27);
             this.btnguardar.TabIndex = 10;
@@ -145,57 +149,90 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(304, 51);
+            this.label6.Location = new System.Drawing.Point(408, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Calificaciones";
             // 
-            // cmboxcalificaciones
+            // txtnota1
             // 
-            this.cmboxcalificaciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboxcalificaciones.FormattingEnabled = true;
-            this.cmboxcalificaciones.Items.AddRange(new object[] {
-            "Nota 1",
-            "Nota 2 ",
-            "Nota 3"});
-            this.cmboxcalificaciones.Location = new System.Drawing.Point(383, 51);
-            this.cmboxcalificaciones.Name = "cmboxcalificaciones";
-            this.cmboxcalificaciones.Size = new System.Drawing.Size(121, 21);
-            this.cmboxcalificaciones.TabIndex = 12;
-            // 
-            // txtcalificaciones
-            // 
-            this.txtcalificaciones.Location = new System.Drawing.Point(383, 93);
-            this.txtcalificaciones.Name = "txtcalificaciones";
-            this.txtcalificaciones.Size = new System.Drawing.Size(121, 20);
-            this.txtcalificaciones.TabIndex = 13;
+            this.txtnota1.Location = new System.Drawing.Point(438, 81);
+            this.txtnota1.Name = "txtnota1";
+            this.txtnota1.Size = new System.Drawing.Size(42, 20);
+            this.txtnota1.TabIndex = 13;
+            this.txtnota1.Tag = "";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(307, 136);
+            this.label7.Location = new System.Drawing.Point(364, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Promedio:";
             // 
-            // textBox1
+            // txtprom
             // 
-            this.textBox1.Location = new System.Drawing.Point(383, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtprom.Location = new System.Drawing.Point(424, 170);
+            this.txtprom.Name = "txtprom";
+            this.txtprom.Size = new System.Drawing.Size(69, 20);
+            this.txtprom.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(390, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Nota 1:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(390, 109);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Nota 2:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(390, 133);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Nota 3:";
+            // 
+            // txtnota2
+            // 
+            this.txtnota2.Location = new System.Drawing.Point(438, 106);
+            this.txtnota2.Name = "txtnota2";
+            this.txtnota2.Size = new System.Drawing.Size(42, 20);
+            this.txtnota2.TabIndex = 19;
+            // 
+            // txtnota3
+            // 
+            this.txtnota3.Location = new System.Drawing.Point(438, 133);
+            this.txtnota3.Name = "txtnota3";
+            this.txtnota3.Size = new System.Drawing.Size(42, 20);
+            this.txtnota3.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 359);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtnota3);
+            this.Controls.Add(this.txtnota2);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtprom);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtcalificaciones);
-            this.Controls.Add(this.cmboxcalificaciones);
+            this.Controls.Add(this.txtnota1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.dgvalumnos);
@@ -230,10 +267,14 @@
         private System.Windows.Forms.DataGridView dgvalumnos;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmboxcalificaciones;
-        private System.Windows.Forms.TextBox txtcalificaciones;
+        private System.Windows.Forms.TextBox txtnota1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtprom;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtnota2;
+        private System.Windows.Forms.TextBox txtnota3;
     }
 }
 

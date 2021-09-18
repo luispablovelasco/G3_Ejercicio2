@@ -14,6 +14,7 @@ namespace G3_Ejercicio01
         string apellido;
         string materia;
         float[] calificaciones = new float[3];
+        
 
         //Metodos
         public string Carnet
@@ -46,10 +47,6 @@ namespace G3_Ejercicio01
             set { calificaciones = value; }
         }
 
-        public double promedio(double nota1, double nota2, double nota3)
-        {
-            double notapromedio = (nota1 + nota2 + nota3) / 3;
-            return notapromedio;
-        }
+
     }
 }

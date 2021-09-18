@@ -16,6 +16,12 @@ namespace G3_Ejercicio01
         private List<Alumno> Alumnos = new List<Alumno>();
         private int editIndice = -1;
 
+        public float promedio(float nota1, float nota2, float nota3)
+        {
+            float notapromedio = (nota1 + nota2 + nota3) / 3;
+            return notapromedio;
+        }
+
         private void actualizarGrid()
         {
             dgvalumnos.DataSource = null;
@@ -33,6 +39,11 @@ namespace G3_Ejercicio01
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnguardar_Click(object sender, EventArgs e)
         {
             
@@ -41,15 +52,16 @@ namespace G3_Ejercicio01
             alumno.Apellido = txtapellido.Text;
             alumno.Carnet = txtcarnet.Text;
             alumno.Materia = txtmateria.Text;
-            for (int i = 0; i < 3; i++)
-            {
-                alumno.Calificaciones[i] = float.Parse(txtcalificaciones.Text);
-            }
+            alumno.Calificaciones[0] = float.Parse(txtnota1.Text);
+            alumno.Calificaciones[1] = float.Parse(txtnota2.Text);
+            alumno.Calificaciones[2] = float.Parse(txtnota3.Text);
+
+            float notaPromedio = promedio(alumno.Calificaciones[0], alumno.Calificaciones[1], alumno.Calificaciones[2]);
 
             if (editIndice >-1)
             {
                 Alumnos[editIndice] = alumno;
-                editIndice = -1
+                editIndice = -1;
             }
             else
             {
@@ -68,9 +80,19 @@ namespace G3_Ejercicio01
 
             Alumno listalumno = Alumnos[pos];
 
+            //Lo siguiente es para cuando se seleccione el alumno, nos muestre los datos en los textbox correspondientes
             txtnombre.Text = listalumno.Nombre;
             txtcarnet.Text = listalumno.Apellido;
             txtmateria.Text = listalumno.Materia;
+            txtapellido.Text = listalumno.Apellido;
+            txtnota1.Text = Convert.ToString(listalumno.Calificaciones[0]);
+            txtnota2.Text = Convert.ToString(listalumno.Calificaciones[1]);
+            txtnota3.Text = Convert.ToString(listalumno.Calificaciones[2]);
+
+            float notaPromedio = promedio(float.Parse(txtnota1.Text), float.Parse(txtnota2.Text), float.Parse(txtnota3.Text));
+ 
+            txtprom.Text = Convert.ToString(notaPromedio);
+            
         }
     }
 }
