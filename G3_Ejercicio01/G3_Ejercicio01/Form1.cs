@@ -10,11 +10,55 @@ using System.Windows.Forms;
 
 namespace G3_Ejercicio01
 {
+
     public partial class Form1 : Form
     {
+        private List<Alumno> Alumnos = new List<Alumno>();
+        private int editIndice = -1;
+
+        private void actualizarGrid()
+        {
+            dgvalumnos.DataSource = null;
+            dgvalumnos.DataSource = Alumnos;
+        }
+        private void limpiar()
+        {
+            txtapellido.Clear();
+            txtcarnet.Clear();
+            txtmateria.Clear();
+            txtnombre.Clear();
+        }
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            
+            Alumno alumno = new Alumno();
+            alumno.Nombre = txtnombre.Text;
+            alumno.Apellido = txtapellido.Text;
+            alumno.Carnet = txtcarnet.Text;
+            alumno.Materia = txtmateria.Text;
+            for (int i = 0; i < 3; i++)
+            {
+                alumno.Calificaciones[i] = float.Parse(txtcalificaciones.Text);
+            }
+
+        }
+
+        private void dgvalumnos_DoubleClick(object sender, EventArgs e)
+        {
+            DataGridViewRow seleccion = dgvalumnos.SelectedRows[0];
+            int pos = dgvalumnos.Rows.IndexOf(seleccion);
+            editIndice = pos;
+
+            Alumno listalumno = Alumnos[pos];
+
+            txtnombre.Text = listalumno.Nombre;
+            txtcarnet.Text = listalumno.Apellido;
+            txtmateria.Text = listalumno.Materia;
         }
     }
 }
