@@ -46,6 +46,18 @@ namespace G3_Ejercicio01
                 alumno.Calificaciones[i] = float.Parse(txtcalificaciones.Text);
             }
 
+            if (editIndice >-1)
+            {
+                Alumnos[editIndice] = alumno;
+                editIndice = -1
+            }
+            else
+            {
+                Alumnos.Add(alumno);
+            }
+            actualizarGrid();
+            limpiar();
+
         }
 
         private void dgvalumnos_DoubleClick(object sender, EventArgs e)
